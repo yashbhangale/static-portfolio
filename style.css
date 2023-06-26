@@ -5,3 +5,14 @@ nav.end-align {
     text-align: end;
   }
   
+.nav-container {
+    position: fixed;
+    right: 0;
+    padding: 10px;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.nav-container a {
+    margin-left: 10px;
+}
