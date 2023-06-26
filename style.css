@@ -6,13 +6,85 @@ nav.end-align {
   }
   
 .nav-container {
-    position: fixed;
-    right: 0;
+    position: absolute;
     padding: 10px;
     text-align: right;
-    margin-right: 50px;
+    margin-right: 30px;
+    width: 100%;
 }
 
 .nav-container a {
     margin-left: 10px;
+    text-decoration: none;
+    border-bottom: none;
 }
+marquee{
+    margin-top: 10px;
+}
+
+.sidebar{
+    margin-top: 50px;
+}
+
+.row-about {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.column-about {
+    flex-basis: 100%;
+    padding: 10px;
+  }
+  
+@media only screen and (min-width: 768px) {
+    .column-about {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
+  
+@media only screen and (min-width: 1200px) {
+    .column-about {
+      flex-basis: 33.33%;
+      max-width: 33.33%;
+    }
+  }
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+.center-image {
+    width: 100%;
+  }
+
+
+  .column-about {
+    float: left;
+    width: 20%;
+    padding: 10px;
+  }
+  
+  .sidenav {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidenav a {
+    padding: 10px;
+    text-decoration: none;
+    color: #002fff;
+    font-size: 16px;
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    .column-about {
+      width: 100%;
+    }
+  }
