@@ -1,85 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>Yash Bhangale</title>
-</head>
-<body>
-    <h1 style="margin-top: 10px ; margin-left: 20px;">Yash Bhangale</h1>
-    <p style="margin-left: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, necessitatibus. </p>
-    <hr style="height: 1px;background-color: rgb(0, 0, 0); width: 100%;">
-    <div class="nav-container">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <marquee><b>If you are a hiring then please visit - <a href="https://bugswriter.com/work/">my projects</a></b></marquee>
-    </div>
-    
-    <div class="siderbar" style="margin-top: 90px;">
-        <hr style="height: 1px;background-color: rgb(0, 0, 0); width: 100%;">
 
-        <div class="w3-container">
-            <h2>Tabs</h2>
-            <p>Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects. Click on the links below.</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <title>Yash Bhangale</title>
+</head>
+
+<body>
+  <h1 style="margin-top: 10px ; margin-left: 20px;">Yash Bhangale</h1>
+  <p style="margin-left: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, necessitatibus. </p>
+  <hr style="height: 1px;background-color: rgb(0, 0, 0); width: 100%;">
+  <div class="nav-container">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <marquee><b>If you are a hiring then please visit - <a href="https://bugswriter.com/work/">my projects</a></b>
+    </marquee>
+  </div>
+
+  <div class="siderbar" style="margin-top: 90px;">
+    <hr style="height: 1px;background-color: rgb(0, 0, 0); width: 100%;">
+
+    <div class="w3-container">
+      <h2>Tabs</h2>
+      <p>Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects.
+        Click on the links below.</p>
+    </div>
+
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button" onclick="openCity('London')">About Me</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+    </div>
+
+    <div id="London" class="w3-container city">
+      <div class="row-about">
+        <div class="column-about">
+          <div class="image-container">
+            <img src="./assets/imgs/main.png" class="center-image"
+              style="border-radius: 2%; max-width: 200px; margin-top: 10px; margin-bottom: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           </div>
-          
-          <div class="w3-bar w3-black">
-            <button class="w3-bar-item w3-button" onclick="openCity('London')">About Me</button>
-            <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-            <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+        </div>
+        <div class="column-about">
+          <h2>About me</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat repellat magni nulla quae ducimus,
+            corporis at voluptates magnam atque iste provident aliquam adipisci soluta praesentium? Laboriosam porro
+            alias atque culpa obcaecati nulla voluptate accusamus dignissimos qui cupiditate eos, sapiente, facilis
+            nihil, nam eaque corrupti quos iste labore. Sint, voluptatem dolore.</p>
+        </div>
+        <div class="column-about-sidebar" style=" display: flex; justify-content: center;">
+          <div class="sidenav">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
           </div>
-          
-          <div id="London" class="w3-container city">
-            <div class="row-about">
-              <div class="column-about">
-                <div class="image-container">
-                  <img src="./assets/imgs/main.png" class="center-image" style="border-radius: 2%; max-width: 200px; margin-top: 10px; margin-bottom: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                </div>
-              </div>
-              <div class="column-about">
-                <h2>About me</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat repellat magni nulla quae ducimus, corporis at voluptates magnam atque iste provident aliquam adipisci soluta praesentium? Laboriosam porro alias atque culpa obcaecati nulla voluptate accusamus dignissimos qui cupiditate eos, sapiente, facilis nihil, nam eaque corrupti quos iste labore. Sint, voluptatem dolore.</p>
-              </div>
-              <div class="column-about-sidebar" style=" display: flex; justify-content: center;">
-                <div class="sidenav" >
-                  <a href="#">About</a>
-                  <a href="#">Services</a>
-                  <a href="#">Clients</a>
-                  <a href="#">Contact</a>
-                </div>
-              </div>
-              <div class="imggif">
-                <img src="https://media.giphy.com/media/IizHZy80WZbkmHiaVP/giphy.gif" alt="GIF Image" style="width: 270px;">
-              </div>              
-            </div>
-          </div>
-        
-          
-          <div id="Paris" class="w3-container city" style="display:none">
+        </div>
+        <div class="imggif">
+          <img src="https://media.giphy.com/media/IizHZy80WZbkmHiaVP/giphy.gif" alt="GIF Image" style="width: 270px;">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row-pro">
+      <div id="Paris" class="w3-container city" style="display:none">
+        <div class="column-pro">
+          <div class="left-column">
             <h2>Paris</h2>
             <p>Paris is the capital of France.</p> 
+            <div class="project">
+              <div class="project-image">
+                <img src="path/to/project-image.jpg" alt="Project Image">
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Retro Project</h3>
+                <p class="project-description">This is a retro-themed project that showcases my skills in HTML, CSS, and JavaScript.</p>
+                <div class="project-buttons">
+                  <a href="#" class="project-link">View Project</a>
+                  <a href="https://github.com/your-username/your-repo" class="github-link">GitHub</a>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div id="Tokyo" class="w3-container city" style="display:none">
-            <h2>Tokyo</h2>
-            <p>Tokyo is the capital of Japan.</p>
+          <div class="right-column">
+            <img src="https://media.giphy.com/media/3HvuHlVwp4EH2EkE3j/giphy.gif" alt="gif" style="width: 200px; ">
           </div>
-          
-          <script>
-          function openCity(cityName) {
-            var i;
-            var x = document.getElementsByClassName("city");
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";  
-            }
-            document.getElementById(cityName).style.display = "block";  
-          }
-          </script>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <div id="Tokyo" class="w3-container city" style="display:none">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    <script>
+      function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+  }
+
+    </script>
+
+
 
 </body>
+
 </html>

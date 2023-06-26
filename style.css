@@ -1,10 +1,11 @@
-body{
+body {
     background-color: rgb(217, 228, 236);
 }
+
 nav.end-align {
     text-align: end;
-  }
-  
+}
+
 .nav-container {
     position: absolute;
     padding: 10px;
@@ -18,36 +19,37 @@ nav.end-align {
     text-decoration: none;
     border-bottom: none;
 }
-marquee{
+
+marquee {
     margin-top: 10px;
 }
 
-.sidebar{
+.sidebar {
     margin-top: 50px;
 }
 
 .row-about {
     display: flex;
     flex-wrap: wrap;
-  }
-  
+}
+
 .column-about {
     flex-basis: 100%;
     padding: 10px;
-  }
-  
+}
+
 @media only screen and (min-width: 768px) {
 
     .column-about {
-      flex-basis: 50%;
-      max-width: 50%;
+        flex-basis: 50%;
+        max-width: 50%;
     }
 }
-  
+
 @media only screen and (min-width: 1200px) {
     .column-about {
-      flex-basis: 33.33%;
-      max-width: 33.33%; 
+        flex-basis: 33.33%;
+        max-width: 33.33%;
     }
 
 
@@ -59,50 +61,157 @@ marquee{
     justify-content: center;
     align-items: center;
     height: 100%;
-  }
-  
+}
+
 .center-image {
     width: 100%;
-  }
+}
 
 
-  .column-about {
+.column-about {
     float: left;
     width: 20%;
     padding: 10px;
-  }
-  .column-about-sidebar {
+}
+
+.column-about-sidebar {
     float: left;
     width: 15%;
     padding: 10px;
-  }
+}
 
 
-  .sidenav {
+.sidenav {
 
     height: 100%;
     display: flex;
     flex-direction: column;
-  }
-  
-  .sidenav a {
+}
+
+.sidenav a {
     padding: 10px;
     text-decoration: none;
     color: #002fff;
     font-size: 16px;
-  }
-  
+}
 
-  @media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 768px) {
     .column-about {
-      width: 100%;
+        width: 100%;
     }
+
     .sidenav {
         height: 100%;
         display: flex;
         flex-direction: column;
         margin-left: 30px;
-      }
+    }
+}
+
+
+/* for my-projects  */
+.row-pro {
+    display: flex;
+    flex-wrap: wrap;
   }
+  
+  .column-pro {
+    display: flex;
+    width: 100%;
+  }
+  
+  .left-column {
+    flex: 0 0 70%;
+  }
+  
+  .right-column {
+    flex: 0 0 30%;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .column-pro {
+      flex-direction: column;
+    }
+    
+    .left-column,
+    .right-column {
+      width: 100%;
+    }
+
+  }
+  
+/* Create two equal columns that floats next to each other */
 
 
+/* Clear floats after the columns */
+.row-pro:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-image {
+    flex: 0 0 200px;
+    margin-right: 20px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    margin-bottom: 10px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+    .project {
+        flex-direction: column;
+
+    }
+
+    .project-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .project-details {
+        width: 100%;
+    }
+}
+
+
+.github-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
