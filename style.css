@@ -1,6 +1,73 @@
+
 body {
     background-color: rgb(217, 228, 236);
+    cursor: none;
+    overflow: hidden;
 }
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    pointer-events: none;
+    z-index: 9999;
+    animation: spin 2s infinite linear;
+  }
+  
+  .custom-cursor::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      background-color: #fff;
+    }
+    50% {
+      background-color: #ff0000; /* Change to your desired color */
+    }
+    100% {
+      background-color: #fff;
+    }
+  }
+  
+ 
+  
+/* navigation  */
 
 nav.end-align {
     text-align: end;
@@ -215,3 +282,177 @@ marquee {
     border-radius: 4px;
     margin-right: 10px;
 }
+
+
+
+
+/* contact me */
+
+.contact-me {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .contact-form {
+    flex-basis: 70%;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .contact-form h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form textarea {
+    height: 100px;
+  }
+  
+  .contact-form button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  #success-message {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #009933;
+  }
+  
+  .image-container {
+    flex-basis: 30%;
+    text-align: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  /* Responsive styles for mobile devices */
+  @media screen and (max-width: 768px) {
+    .contact-me {
+      flex-direction: column;
+    }
+    
+    .contact-form,
+    .image-container {
+      flex-basis: 100%;
+      padding: 10px;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+    }
+  }
+
+
+
+  /* marquee */
+  .marquee {
+    position: relative;
+    overflow: hidden;
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+}
+
+.marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: paused;
+}
+
+.marquee span {
+    font-size: 10vw;
+    padding: 0 2vw;
+}
+
+.marquee:hover .marquee__inner {
+    animation-play-state: running;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
+
+
+
+  
+.container-spidy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-spidy .spiderman {
+    width: 300px;
+    vertical-align: top;
+    margin-top: -60px;
+    animation-name: animar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .shadow {
+    width: 200px;
+    height: 20px;
+    margin: 20px 0;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    animation: sombra 2s alternate infinite;
+  }
+  
+  @keyframes animar {
+    from {
+      transform: translateY(-20px);
+    }
+  
+    to {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* @keyframes sombra {
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(0.6);
+      opacity: 0.2;
+    }
+  } */
+  

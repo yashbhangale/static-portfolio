@@ -11,6 +11,23 @@
 </head>
 
 <body>
+
+  <div class="custom-cursor"></div>
+
+  
+  <div class="loading-screen">
+    <img src="https://media.giphy.com/media/Qyml5wziJeHreuOdzu/giphy.gif" alt="Loader" class="loader" style="width: 200px;">
+  </div>
+  
+
+
+  
+
+
+
+
+
+
   <h1 style="margin-top: 10px ; margin-left: 20px;">Yash Bhangale</h1>
   <p style="margin-left: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, necessitatibus. </p>
   <hr style="height: 1px;background-color: rgb(0, 0, 0); width: 100%;">
@@ -23,20 +40,23 @@
     <marquee><b>If you are a hiring then please visit - <a href="https://bugswriter.com/work/">my projects</a></b>
     </marquee>
   </div>
+  <div class="container-spidy">
+    <img class="spiderman" src="https://media.giphy.com/media/h2MouomJFCpMfWVfUj/giphy.gif" alt="" style="width: 150px; margin-top: -220px; margin-right: -300px; " />
+    <!-- <div class="shadow" style="margin-right: -300px;"></div> -->
 
+    </div>
   <div class="siderbar" style="margin-top: 90px;">
     <hr style="height: 1px;background-color: rgb(0, 0, 0); width: 100%;">
 
     <div class="w3-container">
-      <h2>Tabs</h2>
       <p>Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects.
         Click on the links below.</p>
     </div>
 
     <div class="w3-bar w3-black">
       <button class="w3-bar-item w3-button" onclick="openCity('London')">About Me</button>
-      <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-      <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Projects</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Blogs</button>
     </div>
 
     <div id="London" class="w3-container city">
@@ -68,52 +88,162 @@
       </div>
     </div>
 
-
     <div class="row-pro">
       <div id="Paris" class="w3-container city" style="display:none">
         <div class="column-pro">
           <div class="left-column">
-            <h2>Paris</h2>
-            <p>Paris is the capital of France.</p> 
+            <h2>Projects</h2>
+            <p>Paris is the capital of France.</p>
             <div class="project">
               <div class="project-image">
-                <img src="path/to/project-image.jpg" alt="Project Image">
+                <img
+                  src="https://user-images.githubusercontent.com/68957369/210165478-2617e876-234c-4d95-b9fd-8289f8973ba2.png"
+                  alt="Project Image">
               </div>
               <div class="project-details">
                 <h3 class="project-title">Retro Project</h3>
-                <p class="project-description">This is a retro-themed project that showcases my skills in HTML, CSS, and JavaScript.</p>
+                <p class="project-description">This is a retro-themed project that showcases my skills in HTML, CSS, and
+                  JavaScript.</p>
                 <div class="project-buttons">
                   <a href="#" class="project-link">View Project</a>
                   <a href="https://github.com/your-username/your-repo" class="github-link">GitHub</a>
                 </div>
               </div>
             </div>
+
+            <!-- Add more project sections below -->
+
+            <div class="project">
+              <div class="project-image">
+                <img src="https://example.com/project2-image.png" alt="Project 2 Image">
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Project 2</h3>
+                <p class="project-description">This is the description of Project 2.</p>
+                <div class="project-buttons">
+                  <a href="#" class="project-link">View Project</a>
+                  <a href="https://github.com/your-username/project2-repo" class="github-link">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project">
+              <div class="project-image">
+                <img src="https://example.com/project2-image.png" alt="Project 2 Image">
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Project 2</h3>
+                <p class="project-description">This is the description of Project 2.</p>
+                <div class="project-buttons">
+                  <a href="#" class="project-link">View Project</a>
+                  <a href="https://github.com/your-username/project2-repo" class="github-link">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project">
+              <div class="project-image">
+                <img src="https://example.com/project2-image.png" alt="Project 2 Image">
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Project 2</h3>
+                <p class="project-description">This is the description of Project 2.</p>
+                <div class="project-buttons">
+                  <a href="#" class="project-link">View Project</a>
+                  <a href="https://github.com/your-username/project2-repo" class="github-link">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project">
+              <div class="project-image">
+                <img src="https://example.com/project2-image.png" alt="Project 2 Image">
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Project 2</h3>
+                <p class="project-description">This is the description of Project 2.</p>
+                <div class="project-buttons">
+                  <a href="#" class="project-link">View Project</a>
+                  <a href="https://github.com/your-username/project2-repo" class="github-link">GitHub</a>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="right-column">
-            <img src="https://media.giphy.com/media/3HvuHlVwp4EH2EkE3j/giphy.gif" alt="gif" style="width: 200px; ">
+          <div class="right-column" style="display: flex; flex-direction: column; align-items: flex-start;">
+            <img src="https://media.giphy.com/media/3HvuHlVwp4EH2EkE3j/giphy.gif" alt="gif"
+              style="width: 200px; align-self: flex-end; margin-top: 12%; margin-right: 10%;">
           </div>
         </div>
       </div>
     </div>
-    
-    
 
     <div id="Tokyo" class="w3-container city" style="display:none">
       <h2>Tokyo</h2>
       <p>Tokyo is the capital of Japan.</p>
     </div>
+
+    <hr style=" border: none; height: 1px; background-color: black; margin: 20px 0;">
+
+    <div class="contact-me">
+      <div class="image-container">
+        <img src="https://media.giphy.com/media/7qRP684RY1cfKTDuva/giphy.gif" alt="GIF Image">
+      </div>
+      <div class="contact-form">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div id="success-message"></div>
+      </div>
+    </div>
+   
+   
+    <hr style=" border: none; height: 1px; background-color: rgb(39, 56, 54); margin: 20px 0;">
+
+    <div class="marquee">
+      <div class="marquee__inner" aria-hidden="true">
+        <span>Showreel</span>
+        <span>Showreel</span>
+        <span>Showreel</span>
+        <span>Showreel</span>
+      </div>
+    </div>
+    
+  
+
+
+    <script>
+    window.addEventListener('load', function() {
+      const loader = document.querySelector('.loading-screen');
+      
+      // Hide the loader after 3 seconds
+      setTimeout(function() {
+        loader.style.display = 'none';
+      }, 2000);
+    });
+  </script>
+
     <script>
       function openCity(cityName) {
-    var i;
-    var x = document.getElementsByClassName("city");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    document.getElementById(cityName).style.display = "block";  
-  }
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(cityName).style.display = "block";
+      }
 
     </script>
 
+
+    <script>
+      document.addEventListener('mousemove', function(event) {
+  var cursor = document.querySelector('.custom-cursor');
+  cursor.style.left = event.clientX + 'px';
+  cursor.style.top = event.clientY + 'px';
+});
+    </script>
 
 
 </body>

@@ -1,8 +1,4 @@
-
-
-
-
-//   my projectts tab
+//   my projects tab
 
 var modalInfo = {
     1: {
@@ -90,3 +86,43 @@ var modalInfo = {
           modal.style.display = "none";
       }
   }
+
+
+
+
+
+  // contact me
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    
+    // Get form values
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    
+    // Send the form data to the server (you need to implement the server-side code)
+    // Example using fetch API
+    fetch("/send-message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name: name, email: email, message: message })
+    })
+    .then(function(response) {
+      if (response.ok) {
+        document.getElementById("success-message").textContent = "Message sent successfully!";
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+      } else {
+        document.getElementById("success-message").textContent = "Error sending message.";
+      }
+    })
+    .catch(function(error) {
+      document.getElementById("success-message").textContent = "Error sending message.";
+    });
+  });
+  
+
