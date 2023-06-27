@@ -126,3 +126,12 @@ var modalInfo = {
   });
   
 
+
+
+
+
+
+
+
+// social media icons script
+
