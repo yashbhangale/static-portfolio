@@ -1,279 +1,940 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <title>Yash Bhangale</title>
-</head>
-
-<body>
-
-  <div class="custom-cursor"></div>
-
-  
-  <div class="loading-screen">
-    <img src="https://media.giphy.com/media/Qyml5wziJeHreuOdzu/giphy.gif" alt="Loader" class="loader" style="width: 200px;">
-  </div>
-  
-
-
-  
-
-
-
-
-
-
-  <h1 style="margin-top: 10px ; margin-left: 20px;">Yash Bhangale</h1>
-  <p style="margin-left: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, necessitatibus. </p>
-  <hr style="height: 1px;background-color: rgb(0, 0, 0); width: 100%;">
-  <div class="nav-container">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <marquee><b>If you are a hiring then please visit - <a href="https://bugswriter.com/work/">my projects</a></b>
-    </marquee>
-  </div>
-  <div class="container-spidy">
-    <img class="spiderman" src="https://media.giphy.com/media/h2MouomJFCpMfWVfUj/giphy.gif" alt="" style="width: 150px; margin-top: -180px; margin-right: -300px; position: fixed; " />
-    <!-- <div class="shadow" style="margin-right: -300px;"></div> -->
-
-    </div>
-  <div class="siderbar" style="margin-top: 90px;">
-    <hr style="height: 1px;background-color: rgb(0, 0, 0); width: 100%;">
-
-    <div class="w3-container">
-      <p>Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects.
-        Click on the links below.</p>
-    </div>
-
-    <div class="w3-bar w3-black">
-      <button class="w3-bar-item w3-button" onclick="openCity('London')">About Me</button>
-      <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Projects</button>
-      <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Blogs</button>
-    </div>
-
-    <div id="London" class="w3-container city">
-      <div class="row-about">
-        <div class="column-about">
-          <div class="image-container">
-            <img src="./assets/imgs/main.png" class="center-image"
-              style="border-radius: 2%; max-width: 200px; margin-top: 10px; margin-bottom: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-          </div>
-        </div>
-        <div class="column-about">
-          <h2>About me</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat repellat magni nulla quae ducimus,
-            corporis at voluptates magnam atque iste provident aliquam adipisci soluta praesentium? Laboriosam porro
-            alias atque culpa obcaecati nulla voluptate accusamus dignissimos qui cupiditate eos, sapiente, facilis
-            nihil, nam eaque corrupti quos iste labore. Sint, voluptatem dolore.</p>
-        </div>
-        <div class="column-about-sidebar" style=" display: flex; justify-content: center;">
-          <div class="sidenav">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-          </div>
-        </div>
-        <div class="imggif">
-          <img src="https://media.giphy.com/media/IizHZy80WZbkmHiaVP/giphy.gif" alt="GIF Image" style="width: 270px;">
-        </div>
-      </div>
-    </div>
-
-    <div class="row-pro">
-      <div id="Paris" class="w3-container city" style="display:none">
-        <div class="column-pro">
-          <div class="left-column">
-            <h2>Projects</h2>
-            <p>Paris is the capital of France.</p>
-            <div class="project">
-              <div class="project-image">
-                <img
-                  src="https://user-images.githubusercontent.com/68957369/210165478-2617e876-234c-4d95-b9fd-8289f8973ba2.png"
-                  alt="Project Image">
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">Retro Project</h3>
-                <p class="project-description">This is a retro-themed project that showcases my skills in HTML, CSS, and
-                  JavaScript.</p>
-                <div class="project-buttons">
-                  <a href="#" class="project-link">View Project</a>
-                  <a href="https://github.com/your-username/your-repo" class="github-link">GitHub</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Add more project sections below -->
-
-            <div class="project">
-              <div class="project-image">
-                <img src="https://example.com/project2-image.png" alt="Project 2 Image">
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">Project 2</h3>
-                <p class="project-description">This is the description of Project 2.</p>
-                <div class="project-buttons">
-                  <a href="#" class="project-link">View Project</a>
-                  <a href="https://github.com/your-username/project2-repo" class="github-link">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-image">
-                <img src="https://example.com/project2-image.png" alt="Project 2 Image">
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">Project 2</h3>
-                <p class="project-description">This is the description of Project 2.</p>
-                <div class="project-buttons">
-                  <a href="#" class="project-link">View Project</a>
-                  <a href="https://github.com/your-username/project2-repo" class="github-link">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-image">
-                <img src="https://example.com/project2-image.png" alt="Project 2 Image">
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">Project 2</h3>
-                <p class="project-description">This is the description of Project 2.</p>
-                <div class="project-buttons">
-                  <a href="#" class="project-link">View Project</a>
-                  <a href="https://github.com/your-username/project2-repo" class="github-link">GitHub</a>
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-image">
-                <img src="https://example.com/project2-image.png" alt="Project 2 Image">
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">Project 2</h3>
-                <p class="project-description">This is the description of Project 2.</p>
-                <div class="project-buttons">
-                  <a href="#" class="project-link">View Project</a>
-                  <a href="https://github.com/your-username/project2-repo" class="github-link">GitHub</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="right-column" style="display: flex; flex-direction: column; align-items: flex-start;">
-            <img src="https://media.giphy.com/media/3HvuHlVwp4EH2EkE3j/giphy.gif" alt="gif"
-              style="width: 200px; align-self: flex-end; margin-top: 12%; margin-right: 10%;">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="Tokyo" class="w3-container city" style="display:none">
-      <h2>Tokyo</h2>
-      <p>Tokyo is the capital of Japan.</p>
-    </div>
-
-    <hr style=" border: none; height: 1px; background-color: black; margin: 20px 0;">
-
-    <div class="contact-me">
-      <div class="image-container">
-        <img src="https://media.giphy.com/media/7qRP684RY1cfKTDuva/giphy.gif" alt="GIF Image">
-      </div>
-      <div class="contact-form">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-          <input type="text" id="name" placeholder="Your Name" required>
-          <input type="email" id="email" placeholder="Your Email" required>
-          <textarea id="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-        <div id="success-message"></div>
-      </div>
-    </div>
-   
-   
-    <hr style=" border: none; height: 1px; background-color: rgb(39, 56, 54); margin: 20px 0;">
-
- 
-   <!-- social media icons   -->
-
-       <script>
-    window.addEventListener('load', function() {
-      const loader = document.querySelector('.loading-screen');
-      
-      // Hide the loader after 3 seconds
-      setTimeout(function() {
-        loader.style.display = 'none';
-      }, 2000);
-    });
-  </script>
-
-    <script>
-      function openCity(cityName) {
-        var i;
-        var x = document.getElementsByClassName("city");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Portfolio - DevOps Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
         }
-        document.getElementById(cityName).style.display = "block";
-      }
-
-    </script>
-
+        
+        body {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .terminal-window {
+            background-color: #1e1e1e;
+            width: 100%;
+            height: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .terminal-header {
+            background: linear-gradient(to right, #333, #444);
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .terminal-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .terminal-button {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .close {
+            background-color: #ff5f56;
+        }
+        
+        .minimize {
+            background-color: #ffbd2e;
+        }
+        
+        .maximize {
+            background-color: #27c93f;
+        }
+        
+        .terminal-title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        .terminal-body {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background-color: #121212;
+        }
+        
+        .terminal-input-line {
+            display: flex;
+            margin-bottom: 5px;
+        }
+        
+        .terminal-prompt {
+            color: #7fff00;
+            margin-right: 10px;
+            white-space: nowrap;
+        }
+        
+        .username {
+            color: #58a6ff;
+        }
+        
+        .prompt-path {
+            color: #ff79c6;
+        }
+        
+        .terminal-input {
+            background: transparent;
+            border: none;
+            color: #f0f0f0;
+            outline: none;
+            font-size: 16px;
+            width: 100%;
+            caret-color: #f0f0f0;
+        }
+        
+        .terminal-output {
+            margin-bottom: 15px;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+        
+        .command-output {
+            margin-top: 5px;
+            max-width: 100%;
+        }
+        
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .ascii-art {
+            color: #58a6ff;
+            font-size: 0.8em;
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+        
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .help-item {
+            background-color: #252525;
+            padding: 8px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .help-item:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+        }
+        
+        .command {
+            color: #7fff00;
+            font-weight: bold;
+        }
+        
+        .description {
+            color: #ccc;
+            font-size: 0.9em;
+            margin-top: 4px;
+        }
+        
+        .project-item {
+            background-color: #252525;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border-left: 4px solid #58a6ff;
+            transition: all 0.3s ease;
+        }
+        
+        .project-item:hover {
+            background-color: #2d2d2d;
+            transform: translateX(2px);
+        }
+        
+        .project-title {
+            color: #58a6ff;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .project-desc {
+            color: #ddd;
+            margin-bottom: 8px;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .tech-tag {
+            background-color: #1e1e1e;
+            color: #58a6ff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .skill-category {
+            background-color: #252525;
+            padding: 10px;
+            border-radius: 4px;
+            flex: 1 1 250px;
+        }
+        
+        .category-name {
+            color: #ff79c6;
+            font-weight: bold;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+            margin-bottom: 8px;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .skill-item {
+            background-color: #333;
+            color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .skill-item i {
+            color: #7fff00;
+        }
+        
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0;
+            animation: typing 3.5s steps(40, end);
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        .blink {
+            animation: blink-animation 1s steps(5, start) infinite;
+        }
+        
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+        
+        .highlight {
+            color: #58a6ff;
+            font-weight: bold;
+        }
+        
+        .warning {
+            color: #ffbd2e;
+        }
+        
+        .error {
+            color: #ff5f56;
+        }
+        
+        .success {
+            color: #27c93f;
+        }
+        
+        .dim {
+            color: #888;
+        }
+        
+        /* Matrix rain effect */
+        .matrix-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        
+        canvas {
+            display: block;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .terminal-window {
+                margin: 10px;
+                height: calc(100vh - 20px);
+            }
+            
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-container {
+                flex-direction: column;
+            }
+            
+            .terminal-input {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-container">
+        <canvas id="matrix"></canvas>
+    </div>
+    
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="terminal-button close"></div>
+                <div class="terminal-button minimize"></div>
+                <div class="terminal-button maximize"></div>
+            </div>
+            <div class="terminal-title">user@portfolio ~ - bash</div>
+        </div>
+        
+        <div class="terminal-body" id="terminal-body">
+            <!-- Terminal content will be added here -->
+        </div>
+        
+        <div class="terminal-input-line">
+            <div class="terminal-prompt"><span class="username">user</span>@<span class="hostname">portfolio</span>:<span class="prompt-path">~</span>$</div>
+            <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" autofocus>
+        </div>
+    </div>
 
     <script>
-      document.addEventListener('mousemove', function(event) {
-  var cursor = document.querySelector('.custom-cursor');
-  cursor.style.left = event.clientX + 'px';
-  cursor.style.top = event.clientY + 'px';
-});
-    </script>
+        // Matrix rain effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const symbols = '~/\|•√π÷×¶∆£¢€¥©®™℅[]{}()=+*&%$#@!?;:,.<>';
+        
+        const chars = katakana + latin + nums + symbols;
+        
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        
+        const drops = [];
+        for (let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+        
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#0f0';
+            ctx.font = fontSize + 'px monospace';
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars.charAt(Math.floor(Math.random() * chars.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                
+                drops[i]++;
+            }
+            
+            window.requestAnimationFrame(drawMatrix);
+        }
+        
+        window.requestAnimationFrame(drawMatrix);
+        
+        // Terminal functionality
+        const terminalBody = document.getElementById('terminal-body');
+        const terminalInput = document.getElementById('terminal-input');
+        
+        const commands = {
+            help: showHelp,
+            about: showAbout,
+            projects: showProjects,
+            skills: showSkills,
+            contact: showContact,
+            experience: showExperience,
+            clear: clearTerminal,
+            ls: listCommands,
+            whoami: showWhoami,
+            education: showEducation,
+            achievements: showAchievements,
+            social: showSocial,
+            date: showDate,
+            uname: showUname,
+            neofetch: showNeofetch,
+        };
+        
+        let commandHistory = [];
+        let historyIndex = -1;
+        
+        function init() {
+            showWelcome();
+            terminalInput.focus();
+            
+            window.addEventListener('click', () => {
+                terminalInput.focus();
+            });
+            
+            terminalInput.addEventListener('keydown', handleKeyDown);
+        }
+        
+        function handleKeyDown(e) {
+            if (e.key === 'Enter') {
+                const command = terminalInput.value.trim();
+                if (command) {
+                    processCommand(command);
+                    commandHistory.push(command);
+                    historyIndex = commandHistory.length;
+                    terminalInput.value = '';
+                }
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    terminalInput.value = commandHistory[historyIndex];
+                }
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    terminalInput.value = commandHistory[historyIndex];
+                } else {
+                    historyIndex = commandHistory.length;
+                    terminalInput.value = '';
+                }
+            } else if (e.key === 'Tab') {
+                e.preventDefault();
+                autoCompleteCommand();
+            }
+        }
+        
+        function autoCompleteCommand() {
+            const input = terminalInput.value.trim();
+            if (input) {
+                const possibleCommands = Object.keys(commands).filter(cmd => cmd.startsWith(input));
+                if (possibleCommands.length === 1) {
+                    terminalInput.value = possibleCommands[0];
+                }
+            }
+        }
+        
+        function processCommand(command) {
+            addOutputLine(`<div class="terminal-prompt"><span class="username">user</span>@<span class="hostname">portfolio</span>:<span class="prompt-path">~</span>$ ${command}</div>`);
+            
+            const parts = command.split(' ');
+            const cmd = parts[0].toLowerCase();
+            const args = parts.slice(1);
+            
+            if (commands[cmd]) {
+                commands[cmd](args);
+            } else if (cmd === '') {
+                // Do nothing for empty command
+            } else {
+                addOutputLine(`<div class="command-output error">command not found: ${cmd}</div>`);
+                addOutputLine(`<div class="command-output">Type <span class="highlight">help</span> to see available commands.</div>`);
+            }
+            
+            // Auto scroll to bottom
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+        
+        function addOutputLine(html) {
+            const outputDiv = document.createElement('div');
+            outputDiv.className = 'terminal-output';
+            outputDiv.innerHTML = html;
+            terminalBody.appendChild(outputDiv);
+        }
+        
+        function typeEffect(text, element, speed = 10, complete = () => {}) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function typing() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, speed);
+                } else {
+                    complete();
+                }
+            }
+            
+            typing();
+        }
+        
+        function showWelcome() {
+            const asciiArt = `
+██████╗ ███████╗██╗   ██╗ ██████╗ ██████╗ ███████╗
+██╔══██╗██╔════╝██║   ██║██╔═══██╗██╔══██╗██╔════╝
+██║  ██║█████╗  ██║   ██║██║   ██║██████╔╝███████╗
+██║  ██║██╔══╝  ╚██╗ ██╔╝██║   ██║██╔═══╝ ╚════██║
+██████╔╝███████╗ ╚████╔╝ ╚██████╔╝██║     ███████║
+╚═════╝ ╚══════╝  ╚═══╝   ╚═════╝ ╚═╝     ╚══════╝
+`;
+            
+            addOutputLine(`<pre class="ascii-art">${asciiArt}</pre>`);
+            addOutputLine(`<div class="command-output typing">Welcome to my terminal portfolio! I'm a final-year Engineering Grad and DevOps enthusiast.</div>`);
+            addOutputLine(`<div class="command-output">Type <span class="highlight">help</span> to see available commands or <span class="highlight">about</span> to learn more about me.</div>`);
+            addOutputLine(`<div class="command-output">=================================================================</div>`);
+        }
+        
+        function showHelp() {
+            const helpContent = `
+<div class="command-output">Available commands:</div>
+<div class="help-grid">
+    <div class="help-item">
+        <div class="command">about</div>
+        <div class="description">About me</div>
+    </div>
+    <div class="help-item">
+        <div class="command">projects</div>
+        <div class="description">My projects</div>
+    </div>
+    <div class="help-item">
+        <div class="command">skills</div>
+        <div class="description">My technical skills</div>
+    </div>
+    <div class="help-item">
+        <div class="command">experience</div>
+        <div class="description">Work experience</div>
+    </div>
+    <div class="help-item">
+        <div class="command">education</div>
+        <div class="description">Educational background</div>
+    </div>
+    <div class="help-item">
+        <div class="command">achievements</div>
+        <div class="description">Awards & achievements</div>
+    </div>
+    <div class="help-item">
+        <div class="command">contact</div>
+        <div class="description">Contact information</div>
+    </div>
+    <div class="help-item">
+        <div class="command">social</div>
+        <div class="description">Social media links</div>
+    </div>
+    <div class="help-item">
+        <div class="command">whoami</div>
+        <div class="description">My identity</div>
+    </div>
+    <div class="help-item">
+        <div class="command">neofetch</div>
+        <div class="description">System info</div>
+    </div>
+    <div class="help-item">
+        <div class="command">clear</div>
+        <div class="description">Clear terminal</div>
+    </div>
+    <div class="help-item">
+        <div class="command">ls</div>
+        <div class="description">List commands</div>
+    </div>
+</div>`;
+            
+            addOutputLine(helpContent);
+        }
+        
+        function showAbout() {
+            const aboutContent = `
+<div class="command-output">
+    <p><i class="fas fa-rocket"></i> Final-year Engineering Grad | 21 y/o tech enthusiast</p>
+    <p><i class="fas fa-server"></i> Passionate about building scalable, resilient infrastructure and automated CI/CD pipelines</p>
+    <p><i class="fas fa-cloud"></i> Cloud & DevOps Engineer | Kubernetes Enthusiast | Linux Power User</p>
+    <p><i class="fas fa-trophy"></i> Multiple Hackathons Winner | 1 Year of Industry Experience</p>
+</div>
+<div class="command-output">
+    <p>I'm a passionate DevOps Engineer and Linux enthusiast with expertise in containerization, CI/CD pipelines, and cloud infrastructure. My journey in tech started with a fascination for automation and has evolved into a commitment to building scalable and resilient systems.</p>
+    <p>When I'm not optimizing infrastructure or automating deployments, you can find me participating in hackathons, contributing to open-source projects, or experimenting with the latest DevOps tools and technologies.</p>
+</div>`;
+            
+            addOutputLine(aboutContent);
+        }
+        
+        function showProjects() {
+            const projectsContent = `
+<div class="command-output">Here are some of my notable projects:</div>
 
-
-
-
-<!-- ********************************************************************************************************************************************************** -->
-<div class="floating-container">
-  <div class="floating-button">🫠</div>
-  <div class="element-container">
-    <span class="float-element tooltip-left">
-    <a href="https://www.google.com" target="_blank">
-        <i class="fab fa-github"> 😼</i>
-      </a>
-    </span>
-    <span class="float-element">
-    <a href="https://www.linkedin.com/" target="_blank">
-        <i class="fab fa-linkedin">🔗</i>
-      </a>
-    </span>
-    <span class="float-element">
-      <a href="https://twitter.com/" target="_blank">
-        <i class="fab fa-twitter">🦜 </i>
-      </a>
-    </span>
-    <span class="float-element">
-      <a href="mailto:example@example.com" target="_blank">
-        <i class="far fa-envelope">✉️</i>
-      </span>
-      </a>
-  </div>
+<div class="project-item">
+    <div class="project-title">Auto-Scaling Kubernetes Cluster</div>
+    <div class="project-desc">Designed and implemented a cost-effective auto-scaling Kubernetes cluster on AWS EKS with horizontal pod autoscaling and cluster autoscaler for dynamic workload management.</div>
+    <div class="project-tech">
+        <span class="tech-tag">Kubernetes</span>
+        <span class="tech-tag">AWS EKS</span>
+        <span class="tech-tag">Terraform</span>
+        <span class="tech-tag">Prometheus</span>
+        <span class="tech-tag">Grafana</span>
+    </div>
 </div>
 
+<div class="project-item">
+    <div class="project-title">GitOps CI/CD Pipeline</div>
+    <div class="project-desc">Built a GitOps-based continuous deployment pipeline using ArgoCD and GitHub Actions, reducing deployment time by 70% and improving reliability through infrastructure as code.</div>
+    <div class="project-tech">
+        <span class="tech-tag">ArgoCD</span>
+        <span class="tech-tag">GitHub Actions</span>
+        <span class="tech-tag">Helm</span>
+        <span class="tech-tag">Docker</span>
+        <span class="tech-tag">Kubernetes</span>
+    </div>
+</div>
 
+<div class="project-item">
+    <div class="project-title">Infrastructure Monitoring Suite</div>
+    <div class="project-desc">Developed a comprehensive monitoring solution using the Prometheus stack with custom alerting rules and Grafana dashboards for real-time visibility into system performance.</div>
+    <div class="project-tech">
+        <span class="tech-tag">Prometheus</span>
+        <span class="tech-tag">Grafana</span>
+        <span class="tech-tag">AlertManager</span>
+        <span class="tech-tag">Node Exporter</span>
+        <span class="tech-tag">cAdvisor</span>
+    </div>
+</div>
 
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/clean-blog.js"></script>
+<div class="project-item">
+    <div class="project-title">Serverless Data Processing Pipeline</div>
+    <div class="project-desc">Created a serverless ETL pipeline for processing and analyzing large datasets using AWS Lambda, S3, and DynamoDB, capable of handling millions of records daily.</div>
+    <div class="project-tech">
+        <span class="tech-tag">AWS Lambda</span>
+        <span class="tech-tag">S3</span>
+        <span class="tech-tag">DynamoDB</span>
+        <span class="tech-tag">API Gateway</span>
+        <span class="tech-tag">CloudWatch</span>
+    </div>
+</div>`;
+            
+            addOutputLine(projectsContent);
+        }
+        
+        function showSkills() {
+            const skillsContent = `
+<div class="command-output">Technical Skills:</div>
 
+<div class="skills-container">
+    <div class="skill-category">
+        <div class="category-name"><i class="fas fa-cloud"></i> Cloud Platforms</div>
+        <div class="skill-list">
+            <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
+            <div class="skill-item"><i class="fab fa-google"></i> GCP</div>
+            <div class="skill-item"><i class="fab fa-microsoft"></i> Azure</div>
+            <div class="skill-item"><i class="fas fa-cloud"></i> DigitalOcean</div>
+        </div>
+    </div>
+    
+    <div class="skill-category">
+        <div class="category-name"><i class="fas fa-dharmachakra"></i> Container Orchestration</div>
+        <div class="skill-list">
+            <div class="skill-item"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
+            <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
+            <div class="skill-item"><i class="fas fa-boxes"></i> Helm</div>
+            <div class="skill-item"><i class="fas fa-layer-group"></i> ArgoCD</div>
+        </div>
+    </div>
+    
+    <div class="skill-category">
+        <div class="category-name"><i class="fas fa-code-branch"></i> CI/CD</div>
+        <div class="skill-list">
+            <div class="skill-item"><i class="fab fa-jenkins"></i> Jenkins</div>
+            <div class="skill-item"><i class="fab fa-github"></i> GitHub Actions</div>
+            <div class="skill-item"><i class="fab fa-gitlab"></i> GitLab CI</div>
+            <div class="skill-item"><i class="fas fa-infinity"></i> CircleCI</div>
+        </div>
+    </div>
+    
+    <div class="skill-category">
+        <div class="category-name"><i class="fas fa-terminal"></i> Operating Systems</div>
+        <div class="skill-list">
+            <div class="skill-item"><i class="fab fa-linux"></i> Linux (Ubuntu, CentOS, Debian)</div>
+            <div class="skill-item"><i class="fab fa-redhat"></i> Red Hat</div>
+            <div class="skill-item"><i class="fab fa-windows"></i> Windows Server</div>
+        </div>
+    </div>
+    
+    <div class="skill-category">
+        <div class="category-name"><i class="fas fa-code"></i> Infrastructure as Code</div>
+        <div class="skill-list">
+            <div class="skill-item"><i class="fas fa-file-code"></i> Terraform</div>
+            <div class="skill-item"><i class="fas fa-file-alt"></i> CloudFormation</div>
+            <div class="skill-item"><i class="fab fa-python"></i> Pulumi</div>
+            <div class="skill-item"><i class="fas fa-wrench"></i> Ansible</div>
+        </div>
+    </div>
+    
+    <div class="skill-category">
+        <div class="category-name"><i class="fas fa-chart-line"></i> Monitoring & Logging</div>
+        <div class="skill-list">
+            <div class="skill-item"><i class="fas fa-chart-bar"></i> Prometheus</div>
+            <div class="skill-item"><i class="fas fa-tachometer-alt"></i> Grafana</div>
+            <div class="skill-item"><i class="fas fa-search"></i> ELK Stack</div>
+            <div class="skill-item"><i class="fas fa-file-alt"></i> Loki</div>
+        </div>
+    </div>
+    
+    <div class="skill-category">
+        <div class="category-name"><i class="fas fa-code"></i> Programming Languages</div>
+        <div class="skill-list">
+            <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-item"><i class="fas fa-terminal"></i> Bash</div>
+            <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill-item"><i class="fab fa-java"></i> Java</div>
+        </div>
+    </div>
+</div>`;
+            
+            addOutputLine(skillsContent);
+        }
+        
+        function showContact() {
+            const contactContent = `
+<div class="command-output">
+    <p><i class="fas fa-envelope"></i> Email: <span class="highlight">your.email@example.com</span></p>
+    <p><i class="fas fa-phone"></i> Phone: <span class="highlight">+1 (123) 456-7890</span></p>
+    <p><i class="fas fa-map-marker-alt"></i> Location: <span class="highlight">Your City, Country</span></p>
+</div>
 
+<div class="command-output">
+    Feel free to reach out to me for collaboration opportunities, job inquiries, or just to chat about technology!
+</div>`;
+            
+            addOutputLine(contactContent);
+        }
+        
+        function showExperience() {
+            const experienceContent = `
+<div class="command-output">Work Experience:</div>
 
+<div class="project-item">
+    <div class="project-title">Cloud DevOps Intern - Tech Solutions Inc.</div>
+    <div class="project-desc">May 2024 - Present</div>
+    <ul style="margin-top: 10px; margin-left: 20px;">
+        <li>Implemented CI/CD pipelines using Jenkins and GitHub Actions, reducing deployment time by 40%</li>
+        <li>Designed and deployed Kubernetes clusters for microservices architecture</li>
+        <li>Automated infrastructure provisioning with Terraform and Ansible</li>
+        <li>Set up monitoring and alerting solutions using Prometheus and Grafana</li>
+        <li>Contributed to the migration of legacy applications to containerized environments</li>
+    </ul>
+</div>
 
+<div class="project-item">
+    <div class="project-title">IT Support Specialist - University IT Department</div>
+    <div class="project-desc">September 2023 - April 2024 (Part-time)</div>
+    <ul style="margin-top: 10px; margin-left: 20px;">
+        <li>Provided technical support for university faculty and students</li>
+        <li>Maintained and troubleshot campus network infrastructure</li>
+        <li>Deployed and managed Linux-based servers for academic departments</li>
+        <li>Implemented backup and disaster recovery solutions</li>
+    </ul>
+</div>`;
+            
+            addOutputLine(experienceContent);
+        }
+        
+        function clearTerminal() {
+            terminalBody.innerHTML = '';
+        }
+        
+        function listCommands() {
+            const commandsContent = `
+<div class="command-output">Available commands:</div>
+<div class="command-output" style="color: #7fff00;">
+    about projects skills experience education achievements contact
+    social whoami neofetch clear ls help date uname
+</div>`;
+            
+            addOutputLine(commandsContent);
+        }
+        
+        function showWhoami() {
+    const whoamiContent = `
+<div class="command-output">
+    <p>You are a <span class="highlight">Cloud & DevOps Engineer</span> | <span class="highlight">Kubernetes Enthusiast</span> | <span class="highlight">Linux Power User</span></p>
+    <p>A 21-year-old final-year engineering student with a passion for automation, scalable infrastructure, and optimizing deployment workflows.</p>
+</div>`;
+    
+    addOutputLine(whoamiContent);
+}
+
+function showEducation() {
+    const educationContent = `
+<div class="command-output">Educational Background:</div>
+
+<div class="project-item">
+    <div class="project-title">B.Tech in Computer Science and Engineering</div>
+    <div class="project-desc">University of Technology | 2021 - Present (Expected Graduation: 2025)</div>
+    <ul style="margin-top: 10px; margin-left: 20px;">
+        <li>CGPA: 3.8/4.0</li>
+        <li>Coursework: Distributed Systems, Cloud Computing, Computer Networks, Database Management, Operating Systems</li>
+        <li>Senior Project: Auto-scaling microservices architecture with GitOps workflow</li>
+    </ul>
+</div>
+
+<div class="project-item">
+    <div class="project-title">Relevant Certifications</div>
+    <ul style="margin-top: 10px; margin-left: 20px;">
+        <li>AWS Certified Solutions Architect - Associate</li>
+        <li>Certified Kubernetes Administrator (CKA)</li>
+        <li>HashiCorp Certified Terraform Associate</li>
+        <li>Linux Foundation Certified System Administrator (LFCS)</li>
+    </ul>
+</div>`;
+    
+    addOutputLine(educationContent);
+}
+
+function showAchievements() {
+    const achievementsContent = `
+<div class="command-output">Awards & Achievements:</div>
+
+<div class="project-item">
+    <div class="project-title">Hackathon Winner - CloudNative Hackfest 2024</div>
+    <div class="project-desc">First place for developing an automated disaster recovery solution for Kubernetes clusters</div>
+</div>
+
+<div class="project-item">
+    <div class="project-title">Best DevOps Implementation - University Tech Fest</div>
+    <div class="project-desc">Recognized for creating an end-to-end CI/CD pipeline with comprehensive monitoring</div>
+</div>
+
+<div class="project-item">
+    <div class="project-title">Open Source Contributor</div>
+    <div class="project-desc">Active contributor to Kubernetes, Prometheus, and Terraform open source projects</div>
+</div>
+
+<div class="project-item">
+    <div class="project-title">Technical Blog Author</div>
+    <div class="project-desc">Published articles on DevOps best practices, Kubernetes management, and cloud infrastructure optimization</div>
+</div>`;
+    
+    addOutputLine(achievementsContent);
+}
+
+function showSocial() {
+    const socialContent = `
+<div class="command-output">Connect with me:</div>
+
+<div class="command-output">
+    <p><i class="fab fa-github"></i> GitHub: <span class="highlight"><a href="#" style="color: #58a6ff; text-decoration: none;">github.com/your-username</a></span></p>
+    <p><i class="fab fa-linkedin"></i> LinkedIn: <span class="highlight"><a href="#" style="color: #58a6ff; text-decoration: none;">linkedin.com/in/your-profile</a></span></p>
+    <p><i class="fab fa-twitter"></i> Twitter: <span class="highlight"><a href="#" style="color: #58a6ff; text-decoration: none;">twitter.com/your-handle</a></span></p>
+    <p><i class="fab fa-dev"></i> Dev.to: <span class="highlight"><a href="#" style="color: #58a6ff; text-decoration: none;">dev.to/your-username</a></span></p>
+    <p><i class="fab fa-medium"></i> Medium: <span class="highlight"><a href="#" style="color: #58a6ff; text-decoration: none;">medium.com/@your-username</a></span></p>
+</div>`;
+    
+    addOutputLine(socialContent);
+}
+
+function showDate() {
+    const now = new Date();
+    const dateString = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+    
+    addOutputLine(`<div class="command-output">${dateString}</div>`);
+}
+
+function showUname() {
+    const unameContent = `
+<div class="command-output">
+    Portfolio OS Release 1.0 (terminal-portfolio) #1 SMP PREEMPT
+    Linux 5.15.0-geeky-custom x86_64 GNU/Linux
+</div>`;
+    
+    addOutputLine(unameContent);
+}
+
+function showNeofetch() {
+    const asciiLogo = `
+                    .---.
+                   /     \\
+                   \\.@-@./
+                   /\`\\_/\`\\
+                  //  _  \\\\
+                 | \\     )|_
+                /\`\\_\`>  <_/ \\
+                \\__/'---'\\__/
+    `;
+    
+    const neofetchContent = `
+<div style="display: flex; align-items: flex-start;">
+    <pre class="ascii-art" style="margin-right: 20px;">${asciiLogo}</pre>
+    <div>
+        <div style="color: #58a6ff; font-weight: bold;">user@portfolio</div>
+        <div style="color: #888;">------------------</div>
+        <div><span style="color: #ff79c6;">OS:</span> DevOps Linux x86_64</div>
+        <div><span style="color: #ff79c6;">Host:</span> Cloud Native Machine</div>
+        <div><span style="color: #ff79c6;">Kernel:</span> 5.15.0-geeky-custom</div>
+        <div><span style="color: #ff79c6;">Uptime:</span> 1 year of dev experience</div>
+        <div><span style="color: #ff79c6;">Packages:</span> aws, k8s, docker, terraform</div>
+        <div><span style="color: #ff79c6;">Shell:</span> bash 5.1.16</div>
+        <div><span style="color: #ff79c6;">CPU:</span> Final Year Engineering Student @ 3.8GHz</div>
+        <div><span style="color: #ff79c6;">GPU:</span> Kubernetes Cluster RTX 9000</div>
+        <div><span style="color: #ff79c6;">Memory:</span> Multiple Hackathon Wins</div>
+    </div>
+</div>`;
+    
+    addOutputLine(neofetchContent);
+}
+
+// Initialize the terminal
+window.onload = init;
+</script>
 </body>
-
 </html>
