@@ -5,331 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terminal Portfolio - DevOps Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Courier New', monospace;
-        }
-        
-        body {
-            background-color: #1e1e1e;
-            color: #f0f0f0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .terminal-window {
-            background-color: #1e1e1e;
-            width: 100%;
-            height: 100%;
-            max-width: 900px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        
-        .terminal-header {
-            background: linear-gradient(to right, #333, #444);
-            padding: 10px;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .terminal-buttons {
-            display: flex;
-            gap: 8px;
-        }
-        
-        .terminal-button {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        
-        .close {
-            background-color: #ff5f56;
-        }
-        
-        .minimize {
-            background-color: #ffbd2e;
-        }
-        
-        .maximize {
-            background-color: #27c93f;
-        }
-        
-        .terminal-title {
-            flex-grow: 1;
-            text-align: center;
-            font-size: 14px;
-            color: #aaa;
-        }
-        
-        .terminal-body {
-            flex-grow: 1;
-            padding: 15px;
-            overflow-y: auto;
-            overflow-x: hidden;
-            background-color: #121212;
-        }
-        
-        .terminal-input-line {
-            display: flex;
-            margin-bottom: 5px;
-        }
-        
-        .terminal-prompt {
-            color: #7fff00;
-            margin-right: 10px;
-            white-space: nowrap;
-        }
-        
-        .username {
-            color: #58a6ff;
-        }
-        
-        .prompt-path {
-            color: #ff79c6;
-        }
-        
-        .terminal-input {
-            background: transparent;
-            border: none;
-            color: #f0f0f0;
-            outline: none;
-            font-size: 16px;
-            width: 100%;
-            caret-color: #f0f0f0;
-        }
-        
-        .terminal-output {
-            margin-bottom: 15px;
-            word-wrap: break-word;
-            max-width: 100%;
-        }
-        
-        .command-output {
-            margin-top: 5px;
-            max-width: 100%;
-        }
-        
-        pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-        
-        .ascii-art {
-            color: #58a6ff;
-            font-size: 0.8em;
-            line-height: 1.2;
-            letter-spacing: 1px;
-        }
-        
-        .help-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .help-item {
-            background-color: #252525;
-            padding: 8px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        .help-item:hover {
-            background-color: #333;
-            transform: translateY(-2px);
-        }
-        
-        .command {
-            color: #7fff00;
-            font-weight: bold;
-        }
-        
-        .description {
-            color: #ccc;
-            font-size: 0.9em;
-            margin-top: 4px;
-        }
-        
-        .project-item {
-            background-color: #252525;
-            padding: 15px;
-            border-radius: 4px;
-            margin-bottom: 15px;
-            border-left: 4px solid #58a6ff;
-            transition: all 0.3s ease;
-        }
-        
-        .project-item:hover {
-            background-color: #2d2d2d;
-            transform: translateX(2px);
-        }
-        
-        .project-title {
-            color: #58a6ff;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .project-desc {
-            color: #ddd;
-            margin-bottom: 8px;
-        }
-        
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            margin-top: 10px;
-        }
-        
-        .tech-tag {
-            background-color: #1e1e1e;
-            color: #58a6ff;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-        }
-        
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .skill-category {
-            background-color: #252525;
-            padding: 10px;
-            border-radius: 4px;
-            flex: 1 1 250px;
-        }
-        
-        .category-name {
-            color: #ff79c6;
-            font-weight: bold;
-            border-bottom: 1px solid #555;
-            padding-bottom: 5px;
-            margin-bottom: 8px;
-        }
-        
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-        
-        .skill-item {
-            background-color: #333;
-            color: #f0f0f0;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.9em;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .skill-item i {
-            color: #7fff00;
-        }
-        
-        .typing {
-            overflow: hidden;
-            white-space: nowrap;
-            margin: 0;
-            animation: typing 3.5s steps(40, end);
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        .blink {
-            animation: blink-animation 1s steps(5, start) infinite;
-        }
-        
-        @keyframes blink-animation {
-            to {
-                visibility: hidden;
-            }
-        }
-        
-        .highlight {
-            color: #58a6ff;
-            font-weight: bold;
-        }
-        
-        .warning {
-            color: #ffbd2e;
-        }
-        
-        .error {
-            color: #ff5f56;
-        }
-        
-        .success {
-            color: #27c93f;
-        }
-        
-        .dim {
-            color: #888;
-        }
-        
-        /* Matrix rain effect */
-        .matrix-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            opacity: 0.05;
-            pointer-events: none;
-        }
-        
-        canvas {
-            display: block;
-        }
-        
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .terminal-window {
-                margin: 10px;
-                height: calc(100vh - 20px);
-            }
-            
-            .help-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .skills-container {
-                flex-direction: column;
-            }
-            
-            .terminal-input {
-                font-size: 14px;
-            }
-        }
-    </style>
+   <link rel="stylesheet"  href="./style.css">
 </head>
 <body>
     <div class="matrix-container">
@@ -343,7 +19,7 @@
                 <div class="terminal-button minimize"></div>
                 <div class="terminal-button maximize"></div>
             </div>
-            <div class="terminal-title">user@portfolio ~ - bash</div>
+            <div class="terminal-title">yash@portfolio ~ - bash</div>
         </div>
         
         <div class="terminal-body" id="terminal-body">
@@ -355,6 +31,7 @@
             <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" autofocus>
         </div>
     </div>
+
 
     <script>
         // Matrix rain effect
@@ -491,7 +168,7 @@
                 // Do nothing for empty command
             } else {
                 addOutputLine(`<div class="command-output error">command not found: ${cmd}</div>`);
-                addOutputLine(`<div class="command-output">Type <span class="highlight">help</span> to see available commands.</div>`);
+                addOutputLine(`<div class="command-output">Type <span class="highlight" onclick="processCommand('help')" style="cursor: pointer;">help</span> to see available commands.</div>`);
             }
             
             // Auto scroll to bottom
@@ -524,17 +201,25 @@
         
         function showWelcome() {
             const asciiArt = `
-██████╗ ███████╗██╗   ██╗ ██████╗ ██████╗ ███████╗
-██╔══██╗██╔════╝██║   ██║██╔═══██╗██╔══██╗██╔════╝
-██║  ██║█████╗  ██║   ██║██║   ██║██████╔╝███████╗
-██║  ██║██╔══╝  ╚██╗ ██╔╝██║   ██║██╔═══╝ ╚════██║
-██████╔╝███████╗ ╚████╔╝ ╚██████╔╝██║     ███████║
-╚═════╝ ╚══════╝  ╚═══╝   ╚═════╝ ╚═╝     ╚══════╝
+
+
+Y88b   d88P                888     
+ Y88b d88P                 888     
+  Y88o88P                  888     
+   Y888P  8888b.  .d8888b  88888b. 
+    888      "88b 88K      888 "88b
+    888  .d888888 "Y8888b. 888  888
+    888  888  888      X88 888  888
+    888  "Y888888  88888P' 888  888
+
+
+
 `;
             
             addOutputLine(`<pre class="ascii-art">${asciiArt}</pre>`);
-            addOutputLine(`<div class="command-output typing">Welcome to my terminal portfolio! I'm a final-year Engineering Grad and DevOps enthusiast.</div>`);
-            addOutputLine(`<div class="command-output">Type <span class="highlight">help</span> to see available commands or <span class="highlight">about</span> to learn more about me.</div>`);
+            addOutputLine(`<div class="command-output typing">Keeping Systems Resilient, Scalable, and Blazing Fast ⚡.</div>`);
+            addOutputLine(`<div class="command-output typing">I Build, I Automate, I Optimize – Welcome to My Digital Playground 🛠️.</div>`);
+            addOutputLine(`<div class="command-output">Type <span class="highlight" onclick="processCommand('help')" style="cursor: pointer;">help</span> to see available commands or <span class="highlight" onclick="processCommand('about')" style="cursor: pointer;">about</span> to learn more about me.</div>`);
             addOutputLine(`<div class="command-output">=================================================================</div>`);
         }
         
@@ -542,51 +227,51 @@
             const helpContent = `
 <div class="command-output">Available commands:</div>
 <div class="help-grid">
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('about')" style="cursor: pointer;">
         <div class="command">about</div>
         <div class="description">About me</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('projects')" style="cursor: pointer;">
         <div class="command">projects</div>
         <div class="description">My projects</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('skills')" style="cursor: pointer;">
         <div class="command">skills</div>
         <div class="description">My technical skills</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('experience')" style="cursor: pointer;">
         <div class="command">experience</div>
         <div class="description">Work experience</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('education')" style="cursor: pointer;">
         <div class="command">education</div>
         <div class="description">Educational background</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('achievements')" style="cursor: pointer;">
         <div class="command">achievements</div>
         <div class="description">Awards & achievements</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('contact')" style="cursor: pointer;">
         <div class="command">contact</div>
         <div class="description">Contact information</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('social')" style="cursor: pointer;">
         <div class="command">social</div>
         <div class="description">Social media links</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('whoami')" style="cursor: pointer;">
         <div class="command">whoami</div>
         <div class="description">My identity</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('neofetch')" style="cursor: pointer;">
         <div class="command">neofetch</div>
         <div class="description">System info</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('clear')" style="cursor: pointer;">
         <div class="command">clear</div>
         <div class="description">Clear terminal</div>
     </div>
-    <div class="help-item">
+    <div class="help-item" onclick="processCommand('ls')" style="cursor: pointer;">
         <div class="command">ls</div>
         <div class="description">List commands</div>
     </div>
@@ -596,8 +281,10 @@
         }
         
         function showAbout() {
+            
             const aboutContent = `
 <div class="command-output">
+    <p><i class="fas fa-user"></i> Name: Yash Bhangale</p>
     <p><i class="fas fa-rocket"></i> Final-year Engineering Grad | 21 y/o tech enthusiast</p>
     <p><i class="fas fa-server"></i> Passionate about building scalable, resilient infrastructure and automated CI/CD pipelines</p>
     <p><i class="fas fa-cloud"></i> Cloud & DevOps Engineer | Kubernetes Enthusiast | Linux Power User</p>
@@ -615,51 +302,56 @@
             const projectsContent = `
 <div class="command-output">Here are some of my notable projects:</div>
 
-<div class="project-item">
-    <div class="project-title">Auto-Scaling Kubernetes Cluster</div>
-    <div class="project-desc">Designed and implemented a cost-effective auto-scaling Kubernetes cluster on AWS EKS with horizontal pod autoscaling and cluster autoscaler for dynamic workload management.</div>
+<div class="project-item" onclick="window.open('https://github.com/yashbhangale/fusion', '_blank')" style="cursor: pointer;">
+    <div class="project-title">Fusion Linux</div>
+    <div class="project-desc">Fusion Linux is a Debian-based Linux Distribution geared towards AI Engineers, Data Engineers, and DevOps Engineers for Enterprise Environments.</div>
     <div class="project-tech">
-        <span class="tech-tag">Kubernetes</span>
-        <span class="tech-tag">AWS EKS</span>
-        <span class="tech-tag">Terraform</span>
-        <span class="tech-tag">Prometheus</span>
-        <span class="tech-tag">Grafana</span>
-    </div>
-</div>
-
-<div class="project-item">
-    <div class="project-title">GitOps CI/CD Pipeline</div>
-    <div class="project-desc">Built a GitOps-based continuous deployment pipeline using ArgoCD and GitHub Actions, reducing deployment time by 70% and improving reliability through infrastructure as code.</div>
-    <div class="project-tech">
-        <span class="tech-tag">ArgoCD</span>
-        <span class="tech-tag">GitHub Actions</span>
-        <span class="tech-tag">Helm</span>
+        <span class="tech-tag">Live-Build</span>
+        <span class="tech-tag">Custom-Scripts</span>
+        <span class="tech-tag">Custom-Packages</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">KVM</span>
         <span class="tech-tag">Docker</span>
-        <span class="tech-tag">Kubernetes</span>
+        <span class="tech-tag">CICD</span>
+        <span class="tech-tag">GitOps</span>
+        <span class="tech-tag">CI/CD</span>
     </div>
 </div>
 
-<div class="project-item">
-    <div class="project-title">Infrastructure Monitoring Suite</div>
-    <div class="project-desc">Developed a comprehensive monitoring solution using the Prometheus stack with custom alerting rules and Grafana dashboards for real-time visibility into system performance.</div>
+<div class="project-item" onclick="window.open('https://github.com/yashbhangale/Distro-Builder', '_blank')" style="cursor: pointer;">
+    <div class="project-title">Distribution Builder</div>
+    <div class="project-desc">Custom Distribution Builder is a user-friendly GUI tool that creates a custom Linux distribution based on Debian or Arch Linux, tailored to the user's choice of packages and configurations.</div>
     <div class="project-tech">
-        <span class="tech-tag">Prometheus</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Shell-Scripts</span>
+        <span class="tech-tag">Git</span>
+        <span class="tech-tag">Docker</span>
+        <span class="tech-tag">Open-AI</span>
+    </div>
+</div>
+
+<div class="project-item" onclick="window.open('#', '_blank')" style="cursor: pointer;">
+    <div class="project-title">Infrastructure Monitoring Suite</div>
+    <div class="project-desc">Developed a comprehensive monitoring solution using the Open-source tools like Signoz, Loki, and Grafana with custom alerting rules and Grafana dashboards for real-time visibility into system performance.</div>
+    <div class="project-tech">
+        <span class="tech-tag">Signoz</span>
         <span class="tech-tag">Grafana</span>
         <span class="tech-tag">AlertManager</span>
         <span class="tech-tag">Node Exporter</span>
-        <span class="tech-tag">cAdvisor</span>
+        <span class="tech-tag">ClickHouse</span>
+        <span class="tech-tag">Kubernetes</span>
+        <span class="tech-tag">Helm</span>
     </div>
 </div>
 
-<div class="project-item">
-    <div class="project-title">Serverless Data Processing Pipeline</div>
-    <div class="project-desc">Created a serverless ETL pipeline for processing and analyzing large datasets using AWS Lambda, S3, and DynamoDB, capable of handling millions of records daily.</div>
+<div class="project-item" onclick="window.open('https://github.com/yashbhangale/lenovo-vantage-features-for-linux', '_blank')" style="cursor: pointer;">
+    <div class="project-title">Lenovo Vantage for Linux</div>
+    <div class="project-desc">Lenovo Vantage is an essential tool for managing battery performance, power settings, and system optimizations on Lenovo laptops. However, the official Lenovo Vantage is not available for Linux, unlike its Windows counterpart. To fill this gap, I have developed Lenovo Vantage for Linux, providing key power management features tailored for various </div>
     <div class="project-tech">
-        <span class="tech-tag">AWS Lambda</span>
-        <span class="tech-tag">S3</span>
-        <span class="tech-tag">DynamoDB</span>
-        <span class="tech-tag">API Gateway</span>
-        <span class="tech-tag">CloudWatch</span>
+        <span class="tech-tag">Shell-Scripts</span>
+        <span class="tech-tag">Linux-utils</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Git</span>
     </div>
 </div>`;
             
@@ -674,8 +366,6 @@
     <div class="skill-category">
         <div class="category-name"><i class="fas fa-cloud"></i> Cloud Platforms</div>
         <div class="skill-list">
-            <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
-            <div class="skill-item"><i class="fab fa-google"></i> GCP</div>
             <div class="skill-item"><i class="fab fa-microsoft"></i> Azure</div>
             <div class="skill-item"><i class="fas fa-cloud"></i> DigitalOcean</div>
         </div>
@@ -695,9 +385,8 @@
         <div class="category-name"><i class="fas fa-code-branch"></i> CI/CD</div>
         <div class="skill-list">
             <div class="skill-item"><i class="fab fa-jenkins"></i> Jenkins</div>
-            <div class="skill-item"><i class="fab fa-github"></i> GitHub Actions</div>
-            <div class="skill-item"><i class="fab fa-gitlab"></i> GitLab CI</div>
             <div class="skill-item"><i class="fas fa-infinity"></i> CircleCI</div>
+            <div class="skill-item"><i class="fas fa-infinity"></i> GitHub Actions</div>
         </div>
     </div>
     
@@ -707,16 +396,7 @@
             <div class="skill-item"><i class="fab fa-linux"></i> Linux (Ubuntu, CentOS, Debian)</div>
             <div class="skill-item"><i class="fab fa-redhat"></i> Red Hat</div>
             <div class="skill-item"><i class="fab fa-windows"></i> Windows Server</div>
-        </div>
-    </div>
-    
-    <div class="skill-category">
-        <div class="category-name"><i class="fas fa-code"></i> Infrastructure as Code</div>
-        <div class="skill-list">
-            <div class="skill-item"><i class="fas fa-file-code"></i> Terraform</div>
-            <div class="skill-item"><i class="fas fa-file-alt"></i> CloudFormation</div>
-            <div class="skill-item"><i class="fab fa-python"></i> Pulumi</div>
-            <div class="skill-item"><i class="fas fa-wrench"></i> Ansible</div>
+            <div class="skill-item"><i class="fab fa-apple"></i> MacOS</div>
         </div>
     </div>
     
@@ -725,7 +405,7 @@
         <div class="skill-list">
             <div class="skill-item"><i class="fas fa-chart-bar"></i> Prometheus</div>
             <div class="skill-item"><i class="fas fa-tachometer-alt"></i> Grafana</div>
-            <div class="skill-item"><i class="fas fa-search"></i> ELK Stack</div>
+            <div class="skill-item"><i class="fas fa-search"></i> Signoz</div>
             <div class="skill-item"><i class="fas fa-file-alt"></i> Loki</div>
         </div>
     </div>
@@ -747,9 +427,9 @@
         function showContact() {
             const contactContent = `
 <div class="command-output">
-    <p><i class="fas fa-envelope"></i> Email: <span class="highlight">your.email@example.com</span></p>
-    <p><i class="fas fa-phone"></i> Phone: <span class="highlight">+1 (123) 456-7890</span></p>
-    <p><i class="fas fa-map-marker-alt"></i> Location: <span class="highlight">Your City, Country</span></p>
+    <p><i class="fas fa-envelope"></i> Email: <span class="highlight"><a href="mailto:yash@duck.com" style="color: inherit; text-decoration: none;">yash@duck.com</a></span></p>
+    <p><i class="fas fa-phone"></i> Phone: <span class="highlight">+91 8169362024</span></p>
+    <p><i class="fas fa-map-marker-alt"></i> Location: <span class="highlight">Mumbai, India</span></p>
 </div>
 
 <div class="command-output">
@@ -764,25 +444,26 @@
 <div class="command-output">Work Experience:</div>
 
 <div class="project-item">
-    <div class="project-title">Cloud DevOps Intern - Tech Solutions Inc.</div>
-    <div class="project-desc">May 2024 - Present</div>
+    <div class="project-title">DevOps Intern - Scogo Networks Pvt. Ltd.</div>
+    <div class="project-desc">Jan 2025 - Present</div>
     <ul style="margin-top: 10px; margin-left: 20px;">
-        <li>Implemented CI/CD pipelines using Jenkins and GitHub Actions, reducing deployment time by 40%</li>
-        <li>Designed and deployed Kubernetes clusters for microservices architecture</li>
-        <li>Automated infrastructure provisioning with Terraform and Ansible</li>
-        <li>Set up monitoring and alerting solutions using Prometheus and Grafana</li>
-        <li>Contributed to the migration of legacy applications to containerized environments</li>
+        <li>Set up monitoring and alerting solutions using Signoz</li>
+        <li>Set up SecOps tools like trivy for vulnerability scanning</li>
+        <li>Argocd for CI/CD pipelines and GitOps workflows</li>
+        <li>Contributed to the deployment of AI-powered applications using vllm and langchain libraries in Azure Kubernetes Service (AKS)</li>
     </ul>
 </div>
 
 <div class="project-item">
-    <div class="project-title">IT Support Specialist - University IT Department</div>
-    <div class="project-desc">September 2023 - April 2024 (Part-time)</div>
+    <div class="project-title">Software Developer Intern - Raydium Labs</div>
+    <div class="project-desc">June 2024 - August 2024</div>
     <ul style="margin-top: 10px; margin-left: 20px;">
-        <li>Provided technical support for university faculty and students</li>
-        <li>Maintained and troubleshot campus network infrastructure</li>
-        <li>Deployed and managed Linux-based servers for academic departments</li>
-        <li>Implemented backup and disaster recovery solutions</li>
+        <li>Developed a DAO using React and Node.js</li>
+        <li>Nft Api Integration for minting Nfts on Ethereum Blockchain using Solidity</li>
+        <li>Deployed the Dapp on Vercel</li>
+        <li>Deployed the Smart Contract on Base Sepolia Testnet </li>
+        <li>Smart Contract abi for interaction with Dapp using ethers.js </li>
+        <li>Created Voting System for DAO Proposals</li>
     </ul>
 </div>`;
             
@@ -797,8 +478,9 @@
             const commandsContent = `
 <div class="command-output">Available commands:</div>
 <div class="command-output" style="color: #7fff00;">
-    about projects skills experience education achievements contact
-    social whoami neofetch clear ls help date uname
+    ${Object.keys(commands).map(cmd => 
+        `<span onclick="processCommand('${cmd}')" style="cursor: pointer; margin-right: 10px;">${cmd}</span>`
+    ).join('')}
 </div>`;
             
             addOutputLine(commandsContent);
@@ -807,7 +489,7 @@
         function showWhoami() {
     const whoamiContent = `
 <div class="command-output">
-    <p>You are a <span class="highlight">Cloud & DevOps Engineer</span> | <span class="highlight">Kubernetes Enthusiast</span> | <span class="highlight">Linux Power User</span></p>
+    <p><span class="highlight">Cloud & DevOps Engineer</span> | <span class="highlight">Kubernetes Enthusiast</span> | <span class="highlight">Linux Power User</span></p>
     <p>A 21-year-old final-year engineering student with a passion for automation, scalable infrastructure, and optimizing deployment workflows.</p>
 </div>`;
     
@@ -819,22 +501,20 @@ function showEducation() {
 <div class="command-output">Educational Background:</div>
 
 <div class="project-item">
-    <div class="project-title">B.Tech in Computer Science and Engineering</div>
-    <div class="project-desc">University of Technology | 2021 - Present (Expected Graduation: 2025)</div>
+    <div class="project-title">B.Tech in Artificial Intelligence and Data Science</div>
+    <div class="project-desc">University of Mumbai, Datta Meghe College of Engineering | 2021 - Present (Expected Graduation: 2025)</div>
     <ul style="margin-top: 10px; margin-left: 20px;">
-        <li>CGPA: 3.8/4.0</li>
-        <li>Coursework: Distributed Systems, Cloud Computing, Computer Networks, Database Management, Operating Systems</li>
-        <li>Senior Project: Auto-scaling microservices architecture with GitOps workflow</li>
+        <li>CGPA: 8.2/10</li>
+        <li>Coursework: Natural Language Processing, Machine Learning, Deep Learning, Computer Vision, Artificial Intelligence, Advance AI, Computer Networks, Operating Systems, Database Management</li>
+        <li>Senior Project: Cryptway - A Decentralized Crypto Exchange Platform</li>
     </ul>
 </div>
 
 <div class="project-item">
     <div class="project-title">Relevant Certifications</div>
     <ul style="margin-top: 10px; margin-left: 20px;">
-        <li>AWS Certified Solutions Architect - Associate</li>
-        <li>Certified Kubernetes Administrator (CKA)</li>
-        <li>HashiCorp Certified Terraform Associate</li>
-        <li>Linux Foundation Certified System Administrator (LFCS)</li>
+        <li>Azure Fundamentals</li>
+        <li>Azure Ai Fundamentals</li>
     </ul>
 </div>`;
     
@@ -846,18 +526,18 @@ function showAchievements() {
 <div class="command-output">Awards & Achievements:</div>
 
 <div class="project-item">
-    <div class="project-title">Hackathon Winner - CloudNative Hackfest 2024</div>
-    <div class="project-desc">First place for developing an automated disaster recovery solution for Kubernetes clusters</div>
+    <div class="project-title">Hackathon Winner - Mumbai Hacks 2024</div>
+    <div class="project-desc">Saas Solution for AI-Powered Inventory management system</div>
 </div>
 
 <div class="project-item">
-    <div class="project-title">Best DevOps Implementation - University Tech Fest</div>
-    <div class="project-desc">Recognized for creating an end-to-end CI/CD pipeline with comprehensive monitoring</div>
+    <div class="project-title">Hackathon winner - AI Sparks</div>
+    <div class="project-desc">Fusion Linux Distribution for AI Engineers</div>
 </div>
 
 <div class="project-item">
-    <div class="project-title">Open Source Contributor</div>
-    <div class="project-desc">Active contributor to Kubernetes, Prometheus, and Terraform open source projects</div>
+    <div class="project-title">Smart India Hackathon runner up</div>
+    <div class="project-desc">Drug inventory management system</div>
 </div>
 
 <div class="project-item">
@@ -873,11 +553,10 @@ function showSocial() {
 <div class="command-output">Connect with me:</div>
 
 <div class="command-output">
-    <p><i class="fab fa-github"></i> GitHub: <span class="highlight"><a href="#" style="color: #58a6ff; text-decoration: none;">github.com/your-username</a></span></p>
-    <p><i class="fab fa-linkedin"></i> LinkedIn: <span class="highlight"><a href="#" style="color: #58a6ff; text-decoration: none;">linkedin.com/in/your-profile</a></span></p>
-    <p><i class="fab fa-twitter"></i> Twitter: <span class="highlight"><a href="#" style="color: #58a6ff; text-decoration: none;">twitter.com/your-handle</a></span></p>
-    <p><i class="fab fa-dev"></i> Dev.to: <span class="highlight"><a href="#" style="color: #58a6ff; text-decoration: none;">dev.to/your-username</a></span></p>
-    <p><i class="fab fa-medium"></i> Medium: <span class="highlight"><a href="#" style="color: #58a6ff; text-decoration: none;">medium.com/@your-username</a></span></p>
+    <p><i class="fab fa-github"></i> GitHub: <span class="highlight"><a href="https://github.com/yashbhangale" onclick="window.open(this.href, '_blank'); return false;" style="color: #58a6ff; text-decoration: none;">github.com/yashbhangale</a></span></p>
+    <p><i class="fab fa-linkedin"></i> LinkedIn: <span class="highlight"><a href="https://linkedin.com/in/yashbhangale" onclick="window.open(this.href, '_blank'); return false;" style="color: #58a6ff; text-decoration: none;">linkedin.com/in/yashbhangale</a></span></p>
+    <p><i class="fab fa-twitter"></i> Twitter: <span class="highlight"><a href="https://twitter.com/ttrubleshooter" onclick="window.open(this.href, '_blank'); return false;" style="color: #58a6ff; text-decoration: none;">twitter.com/ttrubleshooter</a></span></p>
+    <p><i class="fab fa-medium"></i> Medium: <span class="highlight"><a href="https://medium.com/@yashbhangale" onclick="window.open(this.href, '_blank'); return false;" style="color: #58a6ff; text-decoration: none;">medium.com/@yashbhangale</a></span></p>
 </div>`;
     
     addOutputLine(socialContent);
@@ -916,7 +595,7 @@ function showNeofetch() {
 <div style="display: flex; align-items: flex-start;">
     <pre class="ascii-art" style="margin-right: 20px;">${asciiLogo}</pre>
     <div>
-        <div style="color: #58a6ff; font-weight: bold;">user@portfolio</div>
+        <div style="color: #58a6ff; font-weight: bold;">yash@portfolio</div>
         <div style="color: #888;">------------------</div>
         <div><span style="color: #ff79c6;">OS:</span> DevOps Linux x86_64</div>
         <div><span style="color: #ff79c6;">Host:</span> Cloud Native Machine</div>
@@ -935,6 +614,9 @@ function showNeofetch() {
 
 // Initialize the terminal
 window.onload = init;
+
+
 </script>
+
 </body>
 </html>
