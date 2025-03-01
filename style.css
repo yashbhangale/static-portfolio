@@ -303,7 +303,7 @@ canvas {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .terminal-window {
         margin: 10px;
         height: calc(100vh - 20px);
