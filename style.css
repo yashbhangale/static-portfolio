@@ -306,7 +306,7 @@ canvas {
 @media (max-width: 760px) {
     .terminal-window {
         margin: 10px;
-        height: calc(100vh - 20px);
+        height: calc(100vh - 80px);
     }
     
     .help-grid {
@@ -330,6 +330,7 @@ canvas {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    left: auto;
     background-color: #007bff;
     color: white;
     width: 50px;
